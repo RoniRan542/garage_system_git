@@ -1,0 +1,25 @@
+[
+	{
+		"Type" : 0,
+		"Year" : 1999,
+		"description" : "White Suzuki baleno",
+		"license_id" : 9804333,
+		"status" : 0
+	},
+	{
+		"Type" : 1,
+		"Year" : 2023,
+		"description" : "Suzuki Red",
+		"extra_sit" : false,
+		"license_id" : 7775554,
+		"status" : 0
+	},
+	{
+		"Type" : 2,
+		"Year" : 2002,
+		"description" : "Ford: problem with brakes with flat tire",
+		"license_id" : 5447151,
+		"status" : 0,
+		"weight" : 3200
+	}
+]
