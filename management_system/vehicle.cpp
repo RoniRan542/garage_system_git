@@ -53,12 +53,12 @@ void Vehicle::SetYear(int year)
     m_year = year;
 }
 
-bool Vehicle::IsExtraSit()
+bool Car::IsExtraSit()
 {
     return false;
 }
 
-unsigned int Vehicle::GetWeight()
+unsigned int Car::GetWeight()
 {
     return 0;
 }
@@ -80,6 +80,11 @@ bool Motorcycle::IsExtraSit()
     return m_extra_sit;
 }
 
+unsigned int Motorcycle::GetWeight()
+{
+    return 0;
+}
+
 Truck::Truck(unsigned long license_id, string description, int year, unsigned int weight)
     : Vehicle(Type::TRUCK, license_id, description, year), m_weight(weight)
 {
@@ -89,4 +94,9 @@ Truck::Truck(unsigned long license_id, string description, int year, unsigned in
 unsigned int Truck::GetWeight()
 {
     return m_weight;
+}
+
+bool Truck::IsExtraSit()
+{
+    return false;
 }

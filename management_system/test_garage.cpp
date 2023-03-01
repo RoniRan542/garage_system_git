@@ -1,6 +1,5 @@
 /*
     TODO:In order to run these files you must install the jsonCpp lib: sudo apt-get install libjsoncpp-dev
-    TODO: Finish updating the json backup files
  */
 
 #include <iostream>

@@ -33,8 +33,8 @@ public:
     void SetDescription(string description);
     void SetLicenseId(unsigned int license_id);
     void SetYear(int year);
-    virtual bool IsExtraSit();
-    virtual unsigned int GetWeight();
+    virtual bool IsExtraSit() = 0;
+    virtual unsigned int GetWeight() = 0;
 
 private:
     Status m_status;
@@ -48,6 +48,8 @@ class Car : public Vehicle
 {
 public:
     Car(unsigned long license_id, string description, int year);
+    virtual bool IsExtraSit();
+    virtual unsigned int GetWeight();
 };
 
 class Motorcycle : public Vehicle
@@ -55,6 +57,7 @@ class Motorcycle : public Vehicle
 public:
     Motorcycle(unsigned long license_id, string description, int year, bool extra_sit);
     virtual bool IsExtraSit();
+    virtual unsigned int GetWeight();
 
 private:
     bool m_extra_sit;
@@ -65,6 +68,7 @@ class Truck : public Vehicle
 public:
     Truck(unsigned long license_id, string description, int year, unsigned int weight);
     virtual unsigned int GetWeight();
+    virtual bool IsExtraSit();
 
 private:
     unsigned int m_weight;
