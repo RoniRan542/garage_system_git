@@ -21,12 +21,13 @@ int main()
     cout << harry->GetName() << ", " << harry->GetPosition() << endl;
 
     cout << "************************\n\n";
-    Vehicle *car1 = new Car(9804763, "Black Suzuki swift", 2008);
-    Vehicle *car2 = new Car(9804333, "White Suzuki baleno", 1999);
-    Vehicle *car3 = new Car(8219197, "Grean Mercedece", 2011);
-    Vehicle *motorcycle1 = new Motorcycle(7775554, "Suzuki Red", 2023, false);
-    Vehicle *truck1 = new Truck(5555151, "Semitrayler with flat tire", 2005, 3599);
-    Vehicle *truck2 = new Truck(5447151, "Ford: problem with brakes with flat tire", 2002, 3200);
+    VehicleFactory myFactory;
+    Vehicle *car1 = myFactory.CreateVehicle(Type::CAR, 9804763, "Black Suzuki swift", 2008, false, 0);
+    Vehicle *car2 = myFactory.CreateVehicle(Type::CAR, 9804333, "White Suzuki baleno", 1999, false, 0);
+    Vehicle *car3 = myFactory.CreateVehicle(Type::CAR, 8219197, "Grean Mercedece", 2011, false, 0);
+    Vehicle *motorcycle1 = myFactory.CreateVehicle(Type::MOTORCYCLE, 7775554, "Suzuki Red", 2023, false, 0);
+    Vehicle *truck1 = myFactory.CreateVehicle(Type::TRUCK, 5555151, "Semitrayler with flat tire", 2005, false, 3599);
+    Vehicle *truck2 = myFactory.CreateVehicle(Type::TRUCK, 5447151, "Ford: problem with brakes with flat tire", 2002, false, 3200);
 
     aviya->GetSystem()->InsertV(car1);
     aviya->GetSystem()->InsertV(car2);

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "vehicle.hpp"
 
 Vehicle::Vehicle(Type type, unsigned long license_id, string description, int year)
@@ -9,10 +10,12 @@ Vehicle::Vehicle(Type type, unsigned long license_id, string description, int ye
 {
     // empty
 }
+
 Status Vehicle::GetStatus() const
 {
     return m_status;
 }
+
 Type Vehicle::GetType() const
 {
     return m_type;

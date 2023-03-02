@@ -74,4 +74,25 @@ private:
     unsigned int m_weight;
 };
 
+class VehicleFactory
+{
+public:
+    Vehicle *CreateVehicle(Type type, unsigned long license_id, string description, int year, bool extra_sit, unsigned int weight)
+    {
+        switch (type)
+        {
+        case Type::CAR:
+            return new Car(license_id, description, year);
+
+        case Type::MOTORCYCLE:
+            return new Motorcycle(license_id, description, year, extra_sit);
+
+        case Type::TRUCK:
+            return new Truck(license_id, description, year, weight);
+        }
+
+        return nullptr;
+    }
+};
+
 #endif //__Vehicle_Hpp__
