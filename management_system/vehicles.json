@@ -21,5 +21,13 @@
 		"license_id" : 5447151,
 		"status" : 0,
 		"weight" : 3200
+	},
+	{
+		"Type" : 1,
+		"Year" : 2014,
+		"description" : "kawasaki",
+		"extra_sit" : true,
+		"license_id" : 647383,
+		"status" : 1
 	}
 ]
