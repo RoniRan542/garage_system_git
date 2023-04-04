@@ -25,8 +25,16 @@ int main()
 
     while (true)
     {
-        cout << "\n********** GARAGE-SYSTEM ***********\n";
-        cout << "Enter a command (type 'exit' to quit): ";
+        cout << "\n*******************************************************\n";
+        cout << "\n******************** GARAGE-SYSTEM ********************\n";
+        cout << "\n*******************************************************\n\n\n\n";
+
+        // cout << "ACTIONS : \n";
+        // cout << "          1 -- Insert a new vehicle\n";
+        // cout << "          2 -- Change status of a vehicle based on the license plate number\n";
+        // cout << "          3 -- Get list of vehicles sorted by year of manufacturing (descending order) \n";
+        // cout << "          4 -- Get the total profit of vehicles that were already released\n";
+        cout << "Enter a command you'd like to perform  (type 'exit' to quit): ";
         getline(cin, input);
 
         if (input == "exit")
@@ -70,7 +78,7 @@ int main()
                 cout << "------------" << endl;
             }
         }
-        else if (strcmp(arg.c_str(), "process") == 0)
+        else if (strcmp(arg.c_str(), "update") == 0)
         {
             cout << "\n**********CHANGING STATUS***********\n";
             vector<string> args(2);

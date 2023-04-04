@@ -61,7 +61,6 @@ void GarageManager::ChangeVehicleStatus(unsigned long license_id, Status new_sta
         }
         vehicles.erase(vehicle_iter);
         BackupUpdateProfit();
-        BackupVehicleDelete(license_id);
     }
 }
 /*
